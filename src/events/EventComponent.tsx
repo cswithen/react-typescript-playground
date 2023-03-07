@@ -1,0 +1,22 @@
+const EventComponent: React.FC = () => {
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event);
+  };
+
+  
+  // ctrl+click for the Type Definition File to see additional Event Types
+  const onDragStart = (event: React.DragEvent<HTMLDivElement>) => {
+    console.log("im being dragged", event);
+  };
+
+  return (
+    <div>
+      <input type="text" onChange={onChange} />
+      <div draggable onDragStart={onDragStart}>
+        Drag Me!
+      </div>
+    </div>
+  );
+};
+
+export default EventComponent;
